@@ -8,7 +8,7 @@ var methodOverride = require('method-override'); // simulate DELETE and PUT (exp
 var cors = require('cors');
  
 // Configuration
-mongoose.connect('mongodb://127.0.0.1:27017/simpleWebSite');
+mongoose.connect('mongodb+srv://user123:user123@cluster0-puaop.mongodb.net/test?retryWrites=true&w=majority');
  
 app.use(morgan('dev'));                                         // log every request to the console
 app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
