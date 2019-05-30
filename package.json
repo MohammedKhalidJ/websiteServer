@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node server.js"
   },
-  "devDependencies": {
+  "Dependencies": {
     "mongoose": "^4.6.2",
     "body-parser": "^1.15.2",
     "cors": "^2.8.0",
