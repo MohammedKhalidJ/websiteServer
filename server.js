@@ -24,6 +24,17 @@ app.use(function(req, res, next) {
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
+
+app.get('/api/getResumes', function(req, res) {	
+
+    var custmrDatas = [{
+        name: 'Khalid',
+        PhoneNumber: 3329653742,
+        Education: 'B.TECH'
+    }];	
+
+    res.json(custmrDatas);
+});
  
 // listen (start app with node server.js) ======================================
 app.listen(process.env.PORT || 4000, function(){
