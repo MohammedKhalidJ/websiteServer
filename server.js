@@ -6,6 +6,7 @@ var morgan = require('morgan');             // log requests to the console (expr
 var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 var cors = require('cors');
+const path = require('path');
  
 // Configuration
 mongoose.connect('mongodb+srv://user123:user123@cluster0-puaop.mongodb.net/test?retryWrites=true&w=majority');
@@ -22,6 +23,10 @@ app.use(function(req, res, next) {
    res.header('Access-Control-Allow-Methods', 'DELETE, PUT');
    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
    next();
+});
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
  
 // Models
